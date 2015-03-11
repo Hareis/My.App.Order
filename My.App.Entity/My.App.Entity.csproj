@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B81AFA4C-DEB2-4C4B-907D-8CA6D96C19B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>My.App.Entity</RootNamespace>
+    <AssemblyName>My.App.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\tbClientUser.cs" />
+    <Compile Include="Client\tbFeedback.cs" />
+    <Compile Include="Client\tbNotice.cs" />
+    <Compile Include="Delivery\tbLogistics.cs" />
+    <Compile Include="Delivery\tbShopLogistics.cs" />
+    <Compile Include="Order\Distribution.cs" />
+    <Compile Include="Order\OrderCollect.cs" />
+    <Compile Include="Order\tbBuyerInfo.cs" />
+    <Compile Include="Order\tbConfigDetail.cs" />
+    <Compile Include="Order\tbConfigEnum.cs" />
+    <Compile Include="Order\tbConsigneeInfo.cs" />
+    <Compile Include="Order\tbOrderPrint.cs" />
+    <Compile Include="Order\tbOrdersConfig.cs" />
+    <Compile Include="Order\tbOrdersDetail.cs" />
+    <Compile Include="Order\tbOrderShipping.cs" />
+    <Compile Include="Order\tbOrdersInfo.cs" />
+    <Compile Include="Order\tbOrdersStatus.cs" />
+    <Compile Include="Order\tbOrderSync.cs" />
+    <Compile Include="Order\tbOtherConfig.cs" />
+    <Compile Include="Print\tbPrintContent.cs" />
+    <Compile Include="Print\tbPrintPlaneSingle.cs" />
+    <Compile Include="Print\tbPrintPlaneSingleDetail.cs" />
+    <Compile Include="Product\tbProductAbb.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop\tbPlatformInfo.cs" />
+    <Compile Include="Shop\tbSenderInfo.cs" />
+    <Compile Include="Shop\tbShopInfo.cs" />
+    <Compile Include="Soft\tbSoftInfo.cs" />
+    <Compile Include="Soft\tbSoftStatus.cs" />
+    <Compile Include="Soft\tbSoftVote.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+E:\My.App\My.App.Order\My.App.Order\My.App.Config\bin\Debug\My.App.Config.dll
+E:\My.App\My.App.Order\My.App.Order\My.App.Config\bin\Debug\My.App.Config.pdb
+E:\My.App\My.App.Order\My.App.Order\My.App.Config\obj\Debug\My.App.Config.dll
+E:\My.App\My.App.Order\My.App.Order\My.App.Config\obj\Debug\My.App.Config.pdb

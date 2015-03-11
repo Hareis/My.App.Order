@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{274B61F8-2536-4B8C-9942-5C5C154E3BDE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>My.App.Data</RootNamespace>
+    <AssemblyName>My.App.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServer\Client\ClientUser.cs" />
+    <Compile Include="SqlServer\Client\Feedback.cs" />
+    <Compile Include="SqlServer\Client\Notice.cs" />
+    <Compile Include="SqlServer\Delivery\Logistics.cs" />
+    <Compile Include="SqlServer\Delivery\ShopLogistics.cs" />
+    <Compile Include="SqlServer\Order\BuyerInfo.cs" />
+    <Compile Include="SqlServer\Order\ConfigDetail.cs" />
+    <Compile Include="SqlServer\Order\ConsigneeInfo.cs" />
+    <Compile Include="SqlServer\Order\OrderPrint.cs" />
+    <Compile Include="SqlServer\Order\OrdersConfig.cs" />
+    <Compile Include="SqlServer\Order\OrdersDetail.cs" />
+    <Compile Include="SqlServer\Order\OrderShipping.cs" />
+    <Compile Include="SqlServer\Order\OrdersInfo.cs" />
+    <Compile Include="SqlServer\Order\OrdersStatus.cs" />
+    <Compile Include="SqlServer\Order\OrderSync.cs" />
+    <Compile Include="SqlServer\Order\OtherConfig.cs" />
+    <Compile Include="SqlServer\Print\PrintContent.cs" />
+    <Compile Include="SqlServer\Print\PrintPlaneSingle.cs" />
+    <Compile Include="SqlServer\Print\PrintPlaneSingleDetail.cs" />
+    <Compile Include="SqlServer\Product\ProductAbb.cs" />
+    <Compile Include="SqlServer\Shop\SenderInfo.cs" />
+    <Compile Include="SqlServer\Shop\ShopInfo.cs" />
+    <Compile Include="SqlServer\Soft\SoftInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\My.App.DBUtility\My.App.DBUtility.csproj">
+      <Project>{810A8135-B310-43CC-AC73-96331B6A3843}</Project>
+      <Name>My.App.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\My.App.Entity\My.App.Entity.csproj">
+      <Project>{B81AFA4C-DEB2-4C4B-907D-8CA6D96C19B6}</Project>
+      <Name>My.App.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\My.App.Interface\My.App.Interface.csproj">
+      <Project>{4DAA5C43-6C13-4130-B9E5-8A3A6803674E}</Project>
+      <Name>My.App.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Access\" />
+    <Folder Include="MySql\" />
+    <Folder Include="Oracle\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

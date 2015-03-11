@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8555C876-0B9E-4FE2-9A5E-E6E7E3D31E3D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>My.App.Config</RootNamespace>
+    <AssemblyName>My.App.Config</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataBase\DataBaseConfig.cs" />
+    <Compile Include="DataBase\DBConfigFileManager.cs" />
+    <Compile Include="DataBase\DBConfigs.cs" />
+    <Compile Include="DataBase\DbType.cs" />
+    <Compile Include="Encrypt\EncryptConfig.cs" />
+    <Compile Include="Encrypt\EncryptConfigFileManager.cs" />
+    <Compile Include="Encrypt\EncryptConfigs.cs" />
+    <Compile Include="Encrypt\EncryptEnum.cs" />
+    <Compile Include="Encrypt\EncryptInfo.cs" />
+    <Compile Include="Encrypt\EncryptType.cs" />
+    <Compile Include="Font\FontConfig.cs" />
+    <Compile Include="Font\FontConfigFileManager.cs" />
+    <Compile Include="Font\FontConfigs.cs" />
+    <Compile Include="Font\FontInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="IConfig\IConfigFileManager.cs" />
+    <Compile Include="IConfig\IConfigInfo.cs" />
+    <Compile Include="Parameter\KVInfo.cs" />
+    <Compile Include="Parameter\ParameterConfig.cs" />
+    <Compile Include="Parameter\ParameterConfigFileManager.cs" />
+    <Compile Include="Parameter\ParameterConfigs.cs" />
+    <Compile Include="Parameter\ParameterInfo.cs" />
+    <Compile Include="PathConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\DefaultConfigFileManager.cs" />
+    <Compile Include="Utils\SerializationHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
